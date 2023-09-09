@@ -1,0 +1,9 @@
+# GitRecommender
+
+I wanted to make a recommender system and brush up on C#, so here we are. This is built on .NET 7 Maui, which is .NET's platform for 
+building cross platform and mobile apps, similar to React Native. GitRecommender is powered by the Github API and SQLite (for now). 
+
+
+## Work in progress
+
+This is a work in progress, it is not ready to use.

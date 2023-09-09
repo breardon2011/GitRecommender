@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GitRecommender.Welcome"
+             Title="Welcome">
+
+
+
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" /> <!-- Automatically sized row for Label -->
+            <RowDefinition Height="Auto" /> <!-- Automatically sized row for Entry -->
+            <RowDefinition Height="Auto" /> <!-- Automatically sized row for Button -->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" /> <!-- Automatically sized column for Label -->
+            <ColumnDefinition Width="Auto" /> <!-- Automatically sized column for Entry -->
+            <ColumnDefinition Width="Auto" /> <!-- Automatically sized column for Button -->
+        </Grid.ColumnDefinitions>
+
+        <Label 
+            Text="Enter your Github username"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="10"
+            Grid.Row="0"
+            Grid.Column="0"/>
+
+        <Entry 
+            Placeholder="username" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" 
+            WidthRequest="300"
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,10,0,0"
+            />
+
+        <Button
+            x:Name="Initialize"
+            Text="Build Recommendations"
+            SemanticProperties.Hint="Builds the repository recommendation database"
+            Clicked="OnInitializeClick"
+            HorizontalOptions="Center"
+            Grid.Row="0"
+            Grid.Column="2"/>
+    </Grid>
+
+</ContentPage>

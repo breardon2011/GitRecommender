@@ -28,13 +28,18 @@ namespace GitRecommender
 
                     Console.WriteLine(responseBody);
 
-
+					
                 }
                 else
                 {
                     Console.WriteLine($"Error: {response.StatusCode}");
                 }
             }
+
+		}
+		// retrive stars per repo
+		public async Task StarCounter(string repo)
+		{
 
 		}
           

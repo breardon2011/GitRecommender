@@ -59,6 +59,15 @@
 		<PackageReference Include="Selenium.WebDriver" Version="4.12.4" />
 		<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="116.0.5845.9600" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="7.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="config.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="config.json" />
+	</ItemGroup>
 </Project>

@@ -14,6 +14,7 @@ namespace GitRecommender
 			_db.CreateTable<Repository>();
 			_db.CreateTable<Star>();
 			_db.CreateTable<Action>();
+			_db.CreateTable<Recommendation>();
 		}
 
 		public void AddUser(string username, string description, int star_count)
@@ -50,6 +51,18 @@ namespace GitRecommender
 			};
 
 			_db.Insert(star);
+		}
+
+		public void AddRecommendation(int user_id, int repo_id, int rating)
+		{
+			var rec = new Recommendation
+			{
+				UserId = user_id,
+				RepoId = repo_id,
+				Rating = rating
+			};
+
+			_db.Insert(rec);
 		}
 	}
 }

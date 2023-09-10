@@ -79,6 +79,23 @@ namespace GitRecommender
 
     }
 
+    [Table("Recommendations")]
+    public class Recommendation
+    {
+        [PrimaryKey, AutoIncrement]
+        [Column("id")]
+        public int Id { get; set; }
+
+        [Column("user_id")]
+        public int UserId { get; set; }
+
+        [Column("repo_id")]
+        public int RepoId { get; set; }
+
+        [Column("rating")]
+        public int Rating { get; set; } 
+    }
+
 
 
 //	public class Models
